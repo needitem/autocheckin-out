@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\p22418\\source\\repos\\ClockOut\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98558F30-E0CC-4758-8736-6201B4678119}|ClockOut\\ClockOut.csproj|c:\\users\\p22418\\source\\repos\\clockout\\clockout\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98558F30-E0CC-4758-8736-6201B4678119}|ClockOut\\ClockOut.csproj|solutionrelative:clockout\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98558F30-E0CC-4758-8736-6201B4678119}|ClockOut\\ClockOut.csproj|c:\\users\\p22418\\source\\repos\\clockout\\clockout\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98558F30-E0CC-4758-8736-6201B4678119}|ClockOut\\ClockOut.csproj|solutionrelative:clockout\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\p22418\\source\\repos\\ClockOut\\ClockOut\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ClockOut\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\p22418\\source\\repos\\ClockOut\\ClockOut\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ClockOut\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAUwAQBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T04:03:21.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\p22418\\source\\repos\\ClockOut\\ClockOut\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "ClockOut\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\p22418\\source\\repos\\ClockOut\\ClockOut\\AssemblyInfo.cs",
+              "RelativeToolTip": "ClockOut\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T04:03:19.343Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

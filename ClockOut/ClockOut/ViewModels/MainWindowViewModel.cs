@@ -1,5 +1,6 @@
 ﻿using ClockOut.Helpers;
 using ClockOut.Models;
+using DotNetEnv;
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -80,6 +81,9 @@ namespace ClockOut.ViewModels
 
         public MainWindowViewModel()
         {
+            // Load .env file
+            Env.Load(); // Added
+
             LeaveWorkCommand = new RelayCommand(async _ => await LeaveWorkAsync(), _ => CanExecuteLeaveWork());
             TurnOffMonitorCommand = new RelayCommand(_ => TurnOffMonitor());
 
@@ -104,8 +108,8 @@ namespace ClockOut.ViewModels
             {
                 var credentials = new UserCredentials
                 {
-                    Username = Environment.GetEnvironmentVariable("CLOCKOUT_USERNAME") ?? "",
-                    Password = Environment.GetEnvironmentVariable("CLOCKOUT_PASSWORD") ?? ""
+                    Username = Environment.GetEnvironmentVariable("USERNAME"),
+                    Password = Environment.GetEnvironmentVariable("PASSWORD")
                 };
 
                 var jsonContent = new StringContent(JsonSerializer.Serialize(new
@@ -136,7 +140,7 @@ namespace ClockOut.ViewModels
                 {
                     // 필요에 따라 추가적인 쿠키 설정
                     var uri = new Uri("https://gw.pixoneer.co.kr/");
-                    cookieContainer.Add(uri, new Cookie("userLoginId", ""));
+                    cookieContainer.Add(uri, new Cookie("userLoginId", credentials.Username));
                     cookieContainer.Add(uri, new Cookie("userLoginInfoSaved", "true"));
                     cookieContainer.Add(uri, new Cookie("TIMELINE_GUIDE_BADGE_173", "done"));
                     cookieContainer.Add(uri, new Cookie("IsCookieActived", "true"));
@@ -194,6 +198,7 @@ namespace ClockOut.ViewModels
                 MessageBox.Show($"퇴근 처리 중 오류 발생: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
 
         private async Task SendTimelineStatusAsync(string action, string workingDay)
         {
@@ -305,7 +310,7 @@ namespace ClockOut.ViewModels
                 DateTime nowKst = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Korea Standard Time"));
                 string workingDay = nowKst.ToString("yyyy-MM-dd");
 
-                await SendTimelineStatusAsync("clockIn", workingDay);
+                await SendTimelineStatusAsync("clockOut", workingDay);
             }
         }
 

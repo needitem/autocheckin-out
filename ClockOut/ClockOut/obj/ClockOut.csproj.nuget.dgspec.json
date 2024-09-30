@@ -24,7 +24,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net8.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
@@ -33,8 +33,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0-windows7.0": {
-            "targetAlias": "net5.0-windows",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -50,16 +50,20 @@
         }
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "dependencies": {
-            "Newtonsoft.Json": {
+            "Serilog": {
               "target": "Package",
-              "version": "[13.0.3, )"
+              "version": "[4.0.2, )"
             },
-            "System.Management": {
+            "Serilog.Extensions.Logging": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -81,7 +85,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

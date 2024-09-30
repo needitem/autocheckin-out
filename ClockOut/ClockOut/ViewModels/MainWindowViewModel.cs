@@ -104,8 +104,8 @@ namespace ClockOut.ViewModels
             {
                 var credentials = new UserCredentials
                 {
-                    Username = Environment.GetEnvironmentVariable("CLOCKOUT_USERNAME") ?? "22418",
-                    Password = Environment.GetEnvironmentVariable("CLOCKOUT_PASSWORD") ?? "Rlaxogh1@1)"
+                    Username = Environment.GetEnvironmentVariable("CLOCKOUT_USERNAME") ?? "",
+                    Password = Environment.GetEnvironmentVariable("CLOCKOUT_PASSWORD") ?? ""
                 };
 
                 var jsonContent = new StringContent(JsonSerializer.Serialize(new
@@ -136,7 +136,7 @@ namespace ClockOut.ViewModels
                 {
                     // 필요에 따라 추가적인 쿠키 설정
                     var uri = new Uri("https://gw.pixoneer.co.kr/");
-                    cookieContainer.Add(uri, new Cookie("userLoginId", "22418"));
+                    cookieContainer.Add(uri, new Cookie("userLoginId", ""));
                     cookieContainer.Add(uri, new Cookie("userLoginInfoSaved", "true"));
                     cookieContainer.Add(uri, new Cookie("TIMELINE_GUIDE_BADGE_173", "done"));
                     cookieContainer.Add(uri, new Cookie("IsCookieActived", "true"));
